@@ -1,0 +1,8 @@
+<!-- <button class="primary btn" (click)="triggerdata()" > click hear </button> -->
+<div *ngIf="ps.receiveddata" >
+<p *ngFor="let re of ps.receiveddata">
+  {{re.name}}  from  
+  {{re.city}}    
+</p>
+
+</div>

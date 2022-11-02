@@ -1,0 +1,16 @@
+
+h1{
+    font-size: 2rem;
+    color: #001;
+}
+div{
+    margin-top: 1rem;
+}
+label{
+    margin-bottom: auto;
+    margin-left: 0.1rem;
+}
+
+#submitbutton{
+    margin-top: 2rem;
+}
