@@ -1,8 +1,12 @@
-<!-- <button class="primary btn" (click)="triggerdata()" > click hear </button> -->
-<div *ngIf="ps.receiveddata" >
-<p *ngFor="let re of ps.receiveddata">
-  {{re.name}}  from  
-  {{re.city}}    
-</p>
+<div>
+  <button class="btn btn-primary" (click)="triggerpost()">
 
+   click me
+  </button>
+  <button class="btn btn-primary" (click)="getallpatients()">
+   get all patients
+  </button>
+  <div *ngIf="htmlel" >
+  <p>{{htmlel.name}}</p>
+  </div>
 </div>

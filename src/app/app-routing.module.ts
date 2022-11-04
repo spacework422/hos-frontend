@@ -16,9 +16,10 @@ import { PharmacistloginComponent } from './pharmacistlogin/pharmacistlogin.comp
 
 const routes: Routes = [
   // main routes without child
+  {path: '', pathMatch: 'full', redirectTo: 'homepage'},
+  {path:'homepage', component:HomepageComponent },
   {path:'patientSignup', component:PatientSignupComponent},
   {path:'login', component:LoginComponent},
-  {path:'homepage', component:HomepageComponent},
   {path:'doctorlogin', component:DoctorloginComponent},
   {path:'pharmacistlogin', component:PharmacistloginComponent},
   {path:'general', component:GeneraltestComponent},

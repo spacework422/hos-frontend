@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import { Patient } from './Patient';
 
 
 
@@ -7,17 +8,24 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class PatientserviceService {
-  receiveddata:any= null;
-  description:string[] = [
-    "test 1 ", 
-    "Seenu is an orphaned street urchin, who used to play Violin and earn money in streets. He has a friend named Junnu. He makes a very close bonding with her",
-    "test 3",
-  ];
-  urlgetdata:string = "https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8";
   constructor(private http:HttpClient) { }
-
-  // getdata():any{
-  //   this.http.get(this.urlgetdata).subscribe(Obser)
-  // }
+  
+  // baseurl for patient only
+  patientgetbyid:string="http://localhost:7075/hospital/patientcontroller/getbyid/"
+  patientalldata:string = "http://localhost:7075/hospital/patientcontroller/getpatient";
+  patientregister:string = "http://localhost:7075/hospital/patientcontroller/patientregister";
+ 
+  //get all patients details
+  allpatientsdata(){
+    return this.http.get(this.patientalldata);
+  }
+  //get by id
+  getpatientbyid(param:number){
+  return this.http.get(`http://localhost:7075/hospital/patientcontroller/getbyid/${param}`);
+  }
+  //post method
+  patientpostmethod(patientdata:Patient){
+    return this.http.post(this.patientregister,patientdata);
+  }
 
 }

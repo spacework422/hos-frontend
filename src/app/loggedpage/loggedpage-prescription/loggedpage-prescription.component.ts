@@ -13,8 +13,6 @@ export class LoggedpagePrescriptionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  triggerdata(){
-    this.ps.getdata();
-  }
+
 
 }

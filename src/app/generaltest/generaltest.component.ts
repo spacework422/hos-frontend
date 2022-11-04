@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientserviceService } from 'src/app/patientservice.service';
+import { Doctor } from '../Doctor';
+import { Pharma } from '../Pharma';
+import { PharmaserviceService } from '../pharmaservice.service';
+
 
 
 
@@ -10,12 +13,28 @@ import { PatientserviceService } from 'src/app/patientservice.service';
   styleUrls: ['./generaltest.component.css']
 })
 export class GeneraltestComponent implements OnInit {
+constructor(public ps:PharmaserviceService) { }
 
-  constructor(public ps:PatientserviceService) { }
+htmlel:any;
 
   ngOnInit(): void {
   }
-  // triggerdata(){
-  //   this.ps.getdata();
-  // }
+  hello:Pharma = {
+   "name":"pharma1",
+   "email":"asdfasd",
+   "age":21,
+   "phoneno":1234,
+   "password":"testing",
+
+  }
+  getallpatients(){
+    this.ps.getpharmabyid(14).subscribe((responsedata)=>{
+       console.log(responsedata);  
+    })
+  }
+  public triggerpost(){
+    this.ps.toregisterpharma(this.hello).subscribe((resposedata)=>{
+      this.htmlel=resposedata;
+    })
+  }
 }

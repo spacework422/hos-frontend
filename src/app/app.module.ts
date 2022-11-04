@@ -24,6 +24,8 @@ import { LoggedpagePrescriptionComponent } from './loggedpage/loggedpage-prescri
 //services imported 
 import { PatientserviceService } from './patientservice.service';
 import { GeneraltestComponent } from './generaltest/generaltest.component';
+import { DoctorserviceService } from './doctorservice.service';
+import { PharmaserviceService } from './pharmaservice.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,7 @@ import { GeneraltestComponent } from './generaltest/generaltest.component';
     HttpClientModule,
 
   ],
-  providers: [PatientserviceService],
+  providers: [PatientserviceService,DoctorserviceService,PharmaserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
