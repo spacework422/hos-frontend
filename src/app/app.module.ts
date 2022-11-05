@@ -4,6 +4,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatFormFieldModule,  } from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 // components imported declared
 import { AppRoutingModule } from './app-routing.module';
@@ -54,6 +56,7 @@ import { PharmaserviceService } from './pharmaservice.service';
     MatRadioModule,
     MatFormFieldModule,
     HttpClientModule,
+    FormsModule,
 
   ],
   providers: [PatientserviceService,DoctorserviceService,PharmaserviceService],
