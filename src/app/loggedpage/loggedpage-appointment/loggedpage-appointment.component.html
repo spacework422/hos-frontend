@@ -13,11 +13,24 @@
 				<input type="email" class="field col emailer" placeholder="Your Email" >
                 </div>
 				<input type="number" class="field" placeholder="Phone" required>
-                <select id="gender" class="field"  required>
+				<div class="row" >
+                <select #stream id="gender" class="field col " (change)="selectedr(stream.value)"  required>
                     <option value="" disabled selected hidden>select Doctor</option>
-                    <option value="male"> Doctor name1 </option>
-                    <option value="female"> Doctor name2</option>
-                    </select>
+                    <option value="gynecology"> gynecology </option>
+                    <option value="Dentists"> Dentists </option>
+					<option value="Neonatologists"> Neonatologists  </option>
+					<option value="orthopedist"> orthopedist  </option>
+					<option value="gastroenterologist"> gastroenterologist   </option>
+					<option value="Dermatologists"> Dermatologists </option>
+
+				</select>
+				<select id="gender" class="field col emailer " name="doctor" >
+					<option value="" disabled  *ngIf="re?.length == 0" > No Doctor </option>
+					<option value="" disabled selected hidden>select Doctor</option>
+                    <option *ngFor="let item of re" [ngValue]="item.name" > {{item.name}} </option>
+                    
+				</select>
+			</div>
 				<textarea placeholder="Write your Symptoms ..." class="field" required></textarea>
 				<button class="btn">Send</button>
 			</div>

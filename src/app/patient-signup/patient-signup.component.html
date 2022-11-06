@@ -3,7 +3,7 @@
     <div id="maindiv">
     <h1>Signup Form</h1>
     <p>Please fill out this form with the required information</p>
-    <form class="form-group" ngNativeValidate>
+    <form class="form-group" (submit)="submitdata()" ngNativeValidate>
       <fieldset>
         <label for="first-name">Enter Your  Name: <input class="form-group" id="first-name" name="first-name" type="text" [(ngModel)]="nameh"  required /></label>
         <label for="new-password">Create a password: <input class="form-group" id="new-password" name="new-password" type="password" [(ngModel)]="passwordh"  required /></label>
@@ -13,7 +13,7 @@
         <label for="Weight">Enter your Weight: <input class="form-group" id="Weight" name="Weight" type="number" [(ngModel)]="weighth" required /></label>
  
     </fieldset>
-      <input class="form-group" (click)="submitdata()" type="submit" value="Submit" />
+      <input class="form-group"  type="submit" value="Submit" />
     </form>
 </div>
 
