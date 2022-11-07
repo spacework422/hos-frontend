@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PatientSignupComponent } from './patient-signup/patient-signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { DoctorloginComponent } from './doctorlogin/doctorlogin.component';
+import { DoctorloginComponent } from './doctorpanel/doctorlogin/doctorlogin.component';
 import { PharmacistloginComponent } from './pharmacistlogin/pharmacistlogin.component';
 import { LoggedstartpageComponent } from './loggedpage/loggedstartpage/loggedstartpage.component';
 import { LoggedpageSidemenuComponent } from './loggedpage/loggedpage-sidemenu/loggedpage-sidemenu.component';
@@ -28,6 +28,8 @@ import { PatientserviceService } from './patientservice.service';
 import { GeneraltestComponent } from './generaltest/generaltest.component';
 import { DoctorserviceService } from './doctorservice.service';
 import { PharmaserviceService } from './pharmaservice.service';
+import { AppointmentService } from './appointment.service';
+import { DoctorpanelComponent } from './doctorpanel/doctorpanel.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { PharmaserviceService } from './pharmaservice.service';
     LoggedpageAppointmentComponent,
     LoggedpagePrescriptionComponent,
     GeneraltestComponent,
-   
+    DoctorpanelComponent,
     
   ],
   imports: [
@@ -59,7 +61,7 @@ import { PharmaserviceService } from './pharmaservice.service';
     FormsModule,
 
   ],
-  providers: [PatientserviceService,DoctorserviceService,PharmaserviceService],
+  providers: [PatientserviceService,DoctorserviceService,PharmaserviceService,AppointmentService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

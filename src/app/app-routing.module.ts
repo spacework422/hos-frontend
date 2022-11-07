@@ -4,7 +4,8 @@ import { AdminDoctorregistrationComponent } from './adminpanel/admin-doctorregis
 import { AdminPharmasistregistrationComponent } from './adminpanel/admin-pharmasistregistration/admin-pharmasistregistration.component';
 import { AdminSidemenuComponent } from './adminpanel/admin-sidemenu/admin-sidemenu.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
-import { DoctorloginComponent } from './doctorlogin/doctorlogin.component';
+import { DoctorloginComponent } from './doctorpanel/doctorlogin/doctorlogin.component';
+import { DoctorpanelComponent } from './doctorpanel/doctorpanel.component';
 import { GeneraltestComponent } from './generaltest/generaltest.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoggedpageAppointmentComponent } from './loggedpage/loggedpage-appointment/loggedpage-appointment.component';
@@ -20,7 +21,6 @@ const routes: Routes = [
   {path:'homepage', component:HomepageComponent },
   {path:'patientSignup', component:PatientSignupComponent},
   {path:'login', component:LoginComponent},
-  {path:'doctorlogin', component:DoctorloginComponent},
   {path:'pharmacistlogin', component:PharmacistloginComponent},
   {path:'general', component:GeneraltestComponent},
 
@@ -39,6 +39,10 @@ const routes: Routes = [
    {path:'loggedpage-prescription', component:LoggedpagePrescriptionComponent},
 
   ]},
+
+  //doctorpanel
+  {path:'doctorlogin', component:DoctorloginComponent},
+  {path:'doctorpanel', component:DoctorpanelComponent},
   
 
 ];

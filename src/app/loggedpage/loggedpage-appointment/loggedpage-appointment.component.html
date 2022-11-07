@@ -5,34 +5,37 @@
 <body>
 	<div class="container">
 		<div class="contact-box">
-            <form>
+            <form (submit)="submitedappointment()" ngNativeValidate>
 			<div class="right">
 				<h2>Appointment Form</h2>
                 <div class="row" >
-				<input type="text" class="field col" placeholder="Your Name" required>
-				<input type="email" class="field col emailer" placeholder="Your Email" >
+				<input name="name" type="text" class="field col" placeholder="Your Name" [(ngModel)]="nameh"  required>
+				<input name="email" type="email" class="field col emailer" placeholder="Your Email" [(ngModel)]="emailh" required >
                 </div>
-				<input type="number" class="field" placeholder="Phone" required>
-				<div class="row" >
-                <select #stream id="gender" class="field col " (change)="selectedr(stream.value)"  required>
-                    <option value="" disabled selected hidden>select Doctor</option>
-                    <option value="gynecology"> gynecology </option>
-                    <option value="Dentists"> Dentists </option>
-					<option value="Neonatologists"> Neonatologists  </option>
-					<option value="orthopedist"> orthopedist  </option>
-					<option value="gastroenterologist"> gastroenterologist   </option>
-					<option value="Dermatologists"> Dermatologists </option>
-
+                <select name="hospital"  #hospital id="hospital" class="field" (change)="hospitalmethod(hospital.value)" [(ngModel)]="hospitalh" required>
+                    <option value="" disabled selected hidden>select Hospital</option>
+                    <option value="ananyahospital"> ANANYA HOSPITAL </option>
+                    <option value="ManipalHospital"> Manipal Hospital </option>
+					<option value="ApolloHospital"> Apollo Hospital  </option>
 				</select>
-				<select id="gender" class="field col emailer " name="doctor" >
-					<option value="" disabled  *ngIf="re?.length == 0" > No Doctor </option>
+				<div class="row" >
+					<select id="stream" #stream class="field col " name="stream" (change)="streammethod(stream.value)" [(ngModel)]="streamh" required >
+						<option value="" disabled  selected hidden >  Select Streams </option>
+						<option value="gynaecologist" >  gynaecologist </option>
+						<option value="Dentists" >  Dentists </option>
+						<option value="Audiologists" >  Audiologists </option>
+						<option value="Cardiologists" >  Cardiologists </option>
+						<option value="Neurologists" >   Neurologists </option>						
+					</select>
+				<select id="doctor" class="field col emailer " name="doctor" [(ngModel)]="doctorh" required >
+					<option value="" disabled  *ngIf="doctorslist?.length == 0" > No Doctor or select stream </option>
 					<option value="" disabled selected hidden>select Doctor</option>
-                    <option *ngFor="let item of re" [ngValue]="item.name" > {{item.name}} </option>
+                    <option *ngFor="let item of doctorslist" [ngValue]="item.name" > {{item.name}} </option>
                     
 				</select>
 			</div>
-				<textarea placeholder="Write your Symptoms ..." class="field" required></textarea>
-				<button class="btn">Send</button>
+				<textarea  name="symptomsarea"placeholder="Write your Symptoms ..." class="field" [(ngModel)]="symptomsh" required></textarea>
+				<button class="btn" type="submit" >Send</button>
 			</div>
           </form>
 		</div>

@@ -14,8 +14,8 @@ export class DoctorserviceService {
   doctorregister:string = "http://localhost:7075/hospital/doctorcontroller/doctorregister";
   //methods
   // getting all doctors list (returns list of doctor objects)
-  getalldoctorsobjects(){
-    return this.http.get(this.getalldoctors);
+  getalldoctorsobjects():Observable<any [] >{
+    return this.http.get<any []>(this.getalldoctors);
   }
  
   //register doctor method (returns doctor object)
@@ -27,8 +27,8 @@ export class DoctorserviceService {
     return this.http.get(`http://localhost:7075/hospital/doctorcontroller/getbyid/${id}`);
   }
 
-  getbystream(streamdata:string):Observable<Doctor []>{
-    return this.http.get<Doctor []>(`http://localhost:7075/hospital/doctorcontroller/getbystream/${streamdata}`);
-  }
+  // getbystream(streamdata:string):Observable<Doctor []>{
+  //   return this.http.get<Doctor []>(`http://localhost:7075/hospital/doctorcontroller/getbystream/${streamdata}`);
+  // }
 
 }
