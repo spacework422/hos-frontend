@@ -1,10 +1,12 @@
 export class Doctor{
     constructor(
-       id:number,
+       doctorId:number,
        name:string,
-       email:string,
-       age:number,
-       phoneno:number,
-       password:string
+       hospital:string,
+       specialization:string,
+       experiance:string,
+       location:string,
+       username:string,
+       password:string,
     ){}
 }

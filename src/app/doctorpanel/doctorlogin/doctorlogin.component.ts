@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Doctor } from 'src/app/Doctor';
+import { DoctorserviceService } from 'src/app/doctorservice.service';
 
 @Component({
   selector: 'app-doctorlogin',
@@ -6,10 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctorlogin.component.css']
 })
 export class DoctorloginComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private dc:DoctorserviceService, private router: Router ) { }
   ngOnInit(): void {
+  }
+
+  usernameh:string='';
+  passwordh:string='';
+  invalidLogin=false
+  errorMessage='Invalid Credentials';
+  doctorlogindata:Doctor='';
+
+  signinmethod(){
+    this.doctorlogindata ={
+      "username":this.usernameh,
+      "password":this.passwordh
+    } 
+    this.dc.doctorlogincheckmethod(this.doctorlogindata).subscribe((res)=>{
+      if(res==true){
+        this.router.navigate(['/doctorpanel']);
+      }
+      else{
+        this.invalidLogin=true
+      }
+    })
   }
 
 }

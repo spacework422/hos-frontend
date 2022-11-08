@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Appointment } from 'src/app/Appointment';
-import { AppointmentService } from 'src/app/appointment.service';
+import { NgForm } from '@angular/forms';
 import { DoctorserviceService } from 'src/app/doctorservice.service';
+import { Healthreport } from 'src/app/Healthreport';
+import { HealthreportService } from 'src/app/healthreport.service';
 
 @Component({
   selector: 'app-loggedpage-appointment',
@@ -11,7 +12,7 @@ import { DoctorserviceService } from 'src/app/doctorservice.service';
 export class LoggedpageAppointmentComponent implements OnInit {
   ngOnInit(): void {
   }
-  constructor(private dc:DoctorserviceService, private appo:AppointmentService) { }
+  constructor(private dc:DoctorserviceService, private appo:HealthreportService) { }
   streamslist:Array<any>=[];
   doctorslist:Array<any>=[];
   //appointment object variable
@@ -21,7 +22,7 @@ export class LoggedpageAppointmentComponent implements OnInit {
   streamh:string='';
   doctorh:string='';
   symptomsh:string='';
-  appointmentform:Appointment='';
+  appointmentform:Healthreport ='';
 
 
   // methods
@@ -40,13 +41,13 @@ export class LoggedpageAppointmentComponent implements OnInit {
   streammethod(streamvalue:string){
     this.doctorslist=[];
     this.streamslist.forEach((singleobject)=>{
-      if(singleobject.stream == streamvalue){
+      if(singleobject.specialization == streamvalue){
        this.doctorslist.push(singleobject);  
       }
     });
     }
 
-    submitedappointment(){
+    submitedappointment(form:NgForm){
       this.appointmentform={
         "patientname":this.nameh,
         "patientemail":this.emailh,
@@ -56,7 +57,8 @@ export class LoggedpageAppointmentComponent implements OnInit {
         "patientsymptoms":this.symptomsh,
       };
        this.appo.registerappointment(this.appointmentform).subscribe((res)=>{
-        console.log(res);
+        alert("submitted");
+        form.reset();
        })
     }
 

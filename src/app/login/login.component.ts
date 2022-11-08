@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }   
   this.ps.patientloginmethod(this.patientlogindata).subscribe((res)=>{
    if(res==true){
-    this.router.navigate(['/loggedstartpage']);
+    this.router.navigate(['/loggedstartpage/loggedpage-appointment']);
    }
    else{
      this.invalidLogin=true;

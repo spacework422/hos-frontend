@@ -5,11 +5,11 @@
 <body>
 	<div class="container">
 		<div class="contact-box">
-            <form (submit)="submitedappointment()" ngNativeValidate>
+            <form #myForm="ngForm" (submit)="submitedappointment(myForm)" ngNativeValidate>
 			<div class="right">
-				<h2>Appointment Form</h2>
+				<h2>Health Report Form</h2>
                 <div class="row" >
-				<input name="name" type="text" class="field col" placeholder="Your Name" [(ngModel)]="nameh"  required>
+				<input name="name" type="text" class="field col" placeholder="Your Name"  [(ngModel)]="nameh"  required>
 				<input name="email" type="email" class="field col emailer" placeholder="Your Email" [(ngModel)]="emailh" required >
                 </div>
                 <select name="hospital"  #hospital id="hospital" class="field" (change)="hospitalmethod(hospital.value)" [(ngModel)]="hospitalh" required>
@@ -35,7 +35,7 @@
 				</select>
 			</div>
 				<textarea  name="symptomsarea"placeholder="Write your Symptoms ..." class="field" [(ngModel)]="symptomsh" required></textarea>
-				<button class="btn" type="submit" >Send</button>
+				<button class="btn" type="submit" >Send</button> 
 			</div>
           </form>
 		</div>

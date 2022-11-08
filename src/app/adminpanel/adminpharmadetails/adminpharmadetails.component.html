@@ -1,0 +1,27 @@
+<div class="mainc" >
+    <table class="table table-info">
+        <thead class="table-dark">
+        <tr >
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">PharmasistId</th>
+          <th scope="col"> Name</th>
+          <th scope="col"> phone </th>
+          <th scope="col">location</th>
+          <th scope="col">username</th>
+
+        <th scope="col">operation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pharma of pharmas "  >
+         <td>{{ pharma.pharmaId }}</td>
+                  <td>{{ pharma.name }}</td>
+                  <td>{{ pharma.phone}}</td>
+                  <td>{{ pharma.location}}</td>
+                  <td>{{ pharma.username }}</td>
+             
+                  <td><button (click)="deletepharma(pharma.pharmaId)" class="btn btn-danger">Delete</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>

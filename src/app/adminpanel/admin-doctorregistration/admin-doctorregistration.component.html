@@ -2,55 +2,53 @@
   <div class="container">
     <div class="title">Doctor Registration Form</div>
     <div class="content">
-      <form action="#">
+      <form #myForm="ngForm" (submit)="submitdoctormethod(myForm)" ngNativeValidate>
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <span class="details"> Name</span>
+            <input type="text" placeholder="Enter your name" name="name" [(ngModel)]="nameh" required>
           </div>
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" placeholder="Enter your username" name="username" [(ngModel)]="usernameh" required>
           </div>
           <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <span class="details">password</span>
+            <input type="text" placeholder="Enter your password" name="password" [(ngModel)]="passwordh" required>
           </div>
           <div class="input-box">
-            <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <span class="details">hospital</span>
+            <!-- <input type="text" placeholder="Enter your hospital" name="hospital" [(ngModel)]="hospitalh" required> -->
+            <select name="hospital"  class="field" [(ngModel)]="hospitalh" required>
+              <option value="" disabled selected hidden >select Hospital</option>
+              <option value="ananyahospital"> ANANYA HOSPITAL </option>
+              <option value="ManipalHospital"> Manipal Hospital </option>
+               <option value="ApolloHospital"> Apollo Hospital  </option>
+           </select>
           </div>
           <div class="input-box">
-            <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <span class="details">specialization</span>
+            <select id="stream"  class="field" name="specialization"  [(ngModel)]="specializationh" required >
+              <option value="" disabled  selected hidden >  Select Streams </option>
+              <option value="gynaecologist" >  gynaecologist </option>
+              <option value="Dentists" >  Dentists </option>
+              <option value="Audiologists" >  Audiologists </option>
+              <option value="Cardiologists" >  Cardiologists </option>
+              <option value="Neurologists" >   Neurologists </option>						
+            </select>
           </div>
-          <!-- <div class="input-box">
-            <span class="details">Confirm Password</span>
-            <input type="text" placeholder="Confirm your password" required>
-          </div> -->
-        </div>
-        <div class="gender-details">
-          <input type="radio" name="gender" id="dot-1">
-          <input type="radio" name="gender" id="dot-2">
-          <input type="radio" name="gender" id="dot-3">
-          <span class="gender-title">Gender</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Male</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Female</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">Prefer not to say</span>
-            </label>
+          <div class="input-box">
+            <span class="details">Experiance</span>
+            <input type="text" placeholder="Enter your Experiance" name="Experiance" [(ngModel)]="experiance" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Location</span>
+            <input type="text" placeholder="Enter your Location" name="Location" [(ngModel)]="locationh" required>
           </div>
         </div>
+
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" value="Register" name="submitbutton" >
         </div>
       </form>
     </div>

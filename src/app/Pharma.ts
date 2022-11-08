@@ -1,10 +1,10 @@
 export class Pharma{
     constructor(
-        id:number,
+        pharmaId:number,
         name:string,
-        email:string,
-        age:number,
-        phoneno:number,
+        location:string,
+        username:string,
+        phone:string,
         password:string
      ){}
 }

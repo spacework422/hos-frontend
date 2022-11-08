@@ -1,0 +1,29 @@
+<div class="mainc" >
+<table class="table table-info">
+    <thead class="table-dark">
+    <tr >
+      <!-- <th scope="col">#</th> -->
+      <th scope="col">doctorId</th>
+      <th scope="col"> Name</th>
+      <th scope="col"> hospital </th>
+      <th scope="col">specialization</th>
+      <th scope="col">experiance</th>
+      <th scope="col">location</th>
+      <th scope="col">username</th>
+    <th scope="col">operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let doctor of doctors "  >
+     <td>{{ doctor.doctorId }}</td>
+              <td>{{ doctor.name }}</td>
+              <td>{{ doctor.hospital}}</td>
+              <td>{{ doctor.specialization}}</td>
+              <td>{{ doctor.experiance }}</td>
+              <td>{{ doctor.location }}</td>
+              <td>{{ doctor.username }}</td>              
+              <td><button (click)="deletedoctor(doctor.doctorId)" class="btn btn-danger">Delete</button>
+    </tr>
+    </tbody>
+  </table>
+</div>

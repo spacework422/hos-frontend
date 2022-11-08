@@ -33,8 +33,7 @@ export class PatientSignupComponent implements OnInit {
     "patientweight":Number(this.weighth)
    }
    this.ps.patientpostmethod(this.patientdata).subscribe((responsedata)=>{
-    console.log(responsedata);
-    this.router.navigate(['/loggedstartpage']); 
+    this.router.navigate(['/login']); 
    });
  }
 

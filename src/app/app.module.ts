@@ -28,8 +28,15 @@ import { PatientserviceService } from './patientservice.service';
 import { GeneraltestComponent } from './generaltest/generaltest.component';
 import { DoctorserviceService } from './doctorservice.service';
 import { PharmaserviceService } from './pharmaservice.service';
-import { AppointmentService } from './appointment.service';
 import { DoctorpanelComponent } from './doctorpanel/doctorpanel.component';
+import { PharmapanelComponent } from './pharmapanel/pharmapanel.component';
+import { DoctorsideComponent } from './doctorpanel/doctorside/doctorside.component';
+import { PharmasideComponent } from './pharmapanel/pharmaside/pharmaside.component';
+import { AdmindoctoreditComponent } from './adminpanel/admindoctoredit/admindoctoredit.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminpharmadetailsComponent } from './adminpanel/adminpharmadetails/adminpharmadetails.component';
+import { HealthreportService } from './healthreport.service';
+import { HealthreportComponent } from './doctorpanel/healthreport/healthreport.component';
 
 @NgModule({
   declarations: [
@@ -45,10 +52,17 @@ import { DoctorpanelComponent } from './doctorpanel/doctorpanel.component';
     AdminDoctorregistrationComponent,
     AdminSidemenuComponent,
     AdminPharmasistregistrationComponent,
-    LoggedpageAppointmentComponent,
     LoggedpagePrescriptionComponent,
     GeneraltestComponent,
     DoctorpanelComponent,
+    PharmapanelComponent,
+    DoctorsideComponent,
+    PharmasideComponent,
+    AdmindoctoreditComponent,
+    AdminloginComponent,
+    AdminpharmadetailsComponent,
+    LoggedpageAppointmentComponent,
+    HealthreportComponent
     
   ],
   imports: [
@@ -61,7 +75,7 @@ import { DoctorpanelComponent } from './doctorpanel/doctorpanel.component';
     FormsModule,
 
   ],
-  providers: [PatientserviceService,DoctorserviceService,PharmaserviceService,AppointmentService ],
+  providers: [PatientserviceService,DoctorserviceService,PharmaserviceService,HealthreportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
