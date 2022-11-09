@@ -37,6 +37,13 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminpharmadetailsComponent } from './adminpanel/adminpharmadetails/adminpharmadetails.component';
 import { HealthreportService } from './healthreport.service';
 import { HealthreportComponent } from './doctorpanel/healthreport/healthreport.component';
+import { DoctorviewformComponent } from './doctorpanel/doctorviewform/doctorviewform.component';
+import { PatientviewformComponent } from './loggedpage/patientviewform/patientviewform.component';
+import { PharmaordersviewComponent } from './pharmapanel/pharmaordersview/pharmaordersview.component';
+import { LoggedDrugComponent } from './loggedpage/logged-drug/logged-drug.component';
+import { PharmaviewformComponent } from './pharmapanel/pharmaviewform/pharmaviewform.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +69,14 @@ import { HealthreportComponent } from './doctorpanel/healthreport/healthreport.c
     AdminloginComponent,
     AdminpharmadetailsComponent,
     LoggedpageAppointmentComponent,
-    HealthreportComponent
+    HealthreportComponent,
+    DoctorviewformComponent,
+    PatientviewformComponent,
+    PharmaordersviewComponent,
+    LoggedDrugComponent,
+    PharmaviewformComponent,
+    AboutusComponent,
+    ContactusComponent
     
   ],
   imports: [

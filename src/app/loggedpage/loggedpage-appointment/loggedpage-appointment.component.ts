@@ -11,6 +11,7 @@ import { HealthreportService } from 'src/app/healthreport.service';
 })
 export class LoggedpageAppointmentComponent implements OnInit {
   ngOnInit(): void {
+    this.nameh=sessionStorage.getItem('patientloginname')!;
   }
   constructor(private dc:DoctorserviceService, private appo:HealthreportService) { }
   streamslist:Array<any>=[];

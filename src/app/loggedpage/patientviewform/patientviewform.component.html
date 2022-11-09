@@ -1,0 +1,31 @@
+
+<head>	
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+            <form #myForm="ngForm" (submit)="orderfunction()"   ngNativeValidate>
+			<div class="right">
+				<h2>patient Health Report Form</h2>
+                <div class="row" >
+				<input name="name" type="text" class="field col" placeholder="Patient Name" readonly  [(ngModel)]="nameh"  required>
+				<input name="email" type="email" class="field col emailer" placeholder="Patient Email" readonly  [(ngModel)]="emailh" required >
+                </div>
+				<textarea  name="symptomsarea"placeholder="patient  Symptoms ..." class="field" readonly  [(ngModel)]="symptomsh" required></textarea>
+                <textarea  name="prescption"placeholder="Write your prescption ..." class="field" readonly [(ngModel)]="prescptionh" required></textarea>
+				<div class="row" >
+					<input name="count" type="text" class="field col" placeholder="quantity "   [(ngModel)]="count"  required>
+					<input name="pharmaname" type="text" class="field col emailer" placeholder=" pharmasist Name"   [(ngModel)]="pharmasistname" required >
+					</div>
+				<div class="row" >	
+				<button class="field col btn btn-primary"  type="submit" >Order </button> 
+				<button class="field col emailer btn btn-primary" (click)="backfunction()" >  Back</button> 
+			</div>
+			</div>
+          </form>
+		</div>
+	</div>
+</body>
+
+

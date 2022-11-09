@@ -33,10 +33,26 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/doctorlogin">Doctor Login</a></li>
-          <li><a class="nav-link scrollto" href="/pharmacistlogin">pharmacist login</a></li>
-          <li><a class="nav-link scrollto " href="/login">patient login</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/doctorlogin">Doctor Login</a>
+              <a class="dropdown-item" href="/pharmacistlogin">pharmacist login</a>
+              <a class="dropdown-item" href="/login">patient login</a>
 
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Register
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/patientSignup">Patient Register</a>
+            
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -57,7 +73,10 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>PDMS</span></h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <p class="animate__animated animate__fadeInUp"> The Prescription Drug Management System is developed to automate all the works which
+                are handled by doctors for prescribing medicines to the patients to reduce the work that is
+                Done manually now. The Prescription Drug Management System is handled by four mains
+                Users’ doctors, pharmacist, patients and admin. </p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -75,7 +94,9 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Doctor will be allowed
+            to prescribe medicines for the patients. The patient detail along with the medicines they 
+            taken which was prescribed by the doctor will be recorded in the system.</p>
         </div>
 
         <div class="row">
@@ -87,8 +108,8 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="">Doctor</a></h4>
+              <p>Able to write the prescription and see the patients problem and able to write the drug</p>
             </div>
           </div>
 
@@ -100,8 +121,8 @@
                 </svg>
                 <i class="bx bx-file"></i>
               </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="">pharmacist </a></h4>
+              <p>Pharmacist able to supply the drug to the patient which they have ordered and maintiain drugs information </p>
             </div>
           </div>
 
@@ -113,8 +134,8 @@
                 </svg>
                 <i class="bx bx-tachometer"></i>
               </div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="">dedicated Patient Account</a></h4>
+              <p>patient can able to communicate with doctor and pharmacist and share there problem with doctors and order the drug from pharmacist </p>
             </div>
           </div>
 
@@ -131,13 +152,20 @@
   <footer id="footer">
     <div class="container">
       <h3>PDMS</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p> The Prescription Drug Management System is developed to automate all the works which
+        are handled by doctors for prescribing medicines to the patients <a routerLink="/aboutus">about Us</a> , <a routerLink="/contactus" > Contact Us</a> </p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <button class="btn btn-primary" style="margin-left:10px;" > Home </button>
+        <button class="btn btn-primary" style="margin-left:10px;" > Submit </button>
+        <button class="btn btn-primary" style="margin-left:10px;" > Back </button>
+        <button class="btn btn-primary" style="margin-left:10px;" > Exit </button>
+        <button class="btn btn-primary" style="margin-left:10px;" > Next </button>
+
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
       </div>
     </div>
   </footer><!-- End Footer -->

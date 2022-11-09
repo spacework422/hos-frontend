@@ -1,0 +1,25 @@
+<table class="table table-info">
+    <thead class="table-dark">
+    <tr >
+      <th scope="col">Id</th>
+      <th scope="col">patient Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">selected hospital</th>
+      <th scope="col">related field</th>
+      <th scope="col">view problem</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let healthreport of listofhealthreport ">
+              <td>{{ healthreport.id }}</td>
+              <td>{{ healthreport.patientname }}</td>
+              <td>{{ healthreport.patientemail}}</td>
+              <td>{{ healthreport.patientselectedhospital}}</td>
+              <td>{{ healthreport.patientselectedstream}}</td>
+              <td><button (click)="viewhealthreport(healthreport.id)" class="btn btn-success">view form</button>
+    </tr>
+    </tbody>
+  </table>

@@ -9,14 +9,19 @@
 			<div class="right">
 				<h2>Health Report Form</h2>
                 <div class="row" >
-				<input name="name" type="text" class="field col" placeholder="Your Name"  [(ngModel)]="nameh"  required>
+				<input name="name" type="text" class="field col" placeholder="Your Name"   [(ngModel)]="nameh"  required>
 				<input name="email" type="email" class="field col emailer" placeholder="Your Email" [(ngModel)]="emailh" required >
                 </div>
                 <select name="hospital"  #hospital id="hospital" class="field" (change)="hospitalmethod(hospital.value)" [(ngModel)]="hospitalh" required>
                     <option value="" disabled selected hidden>select Hospital</option>
-                    <option value="ananyahospital"> ANANYA HOSPITAL </option>
-                    <option value="ManipalHospital"> Manipal Hospital </option>
-					<option value="ApolloHospital"> Apollo Hospital  </option>
+                    <option value="yalenewhavenhospital"> yale new haven hospital </option>
+                    <option value="bridgeporthospital"> bridgeport hospital </option>
+					<option value="hartfordhospital">  hartford hospital  </option>
+					<option value="johnhopkinshospital">  john hopkins hospital   </option>
+					<option value="dukeuniversityhospital"> duke university hospital  </option>
+					<option value="Stanfordhospital">Stanford hospital </option>
+					<option value="Harvardhospital">  Harvard hospital  </option>
+
 				</select>
 				<div class="row" >
 					<select id="stream" #stream class="field col " name="stream" (change)="streammethod(stream.value)" [(ngModel)]="streamh" required >
@@ -30,7 +35,7 @@
 				<select id="doctor" class="field col emailer " name="doctor" [(ngModel)]="doctorh" required >
 					<option value="" disabled  *ngIf="doctorslist?.length == 0" > No Doctor or select stream </option>
 					<option value="" disabled selected hidden>select Doctor</option>
-                    <option *ngFor="let item of doctorslist" [ngValue]="item.name" > {{item.name}} </option>
+                    <option *ngFor="let doctor of doctorslist" [ngValue]="doctor.username" > {{doctor.username}} </option>
                     
 				</select>
 			</div>

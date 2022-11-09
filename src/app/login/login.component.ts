@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }   
   this.ps.patientloginmethod(this.patientlogindata).subscribe((res)=>{
    if(res==true){
+    sessionStorage.setItem('patientloginname',this.usernameh)
     this.router.navigate(['/loggedstartpage/loggedpage-appointment']);
    }
    else{

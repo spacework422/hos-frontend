@@ -26,7 +26,8 @@ export class DoctorloginComponent implements OnInit {
     } 
     this.dc.doctorlogincheckmethod(this.doctorlogindata).subscribe((res)=>{
       if(res==true){
-        this.router.navigate(['/doctorpanel']);
+        sessionStorage.setItem('doctorloginusername', this.usernameh);
+        this.router.navigate(['/doctorpanel/doctorhealth']);
       }
       else{
         this.invalidLogin=true

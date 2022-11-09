@@ -11,10 +11,10 @@ export class DoctorserviceService {
   constructor(private http:HttpClient) { }
   
   //urls
-  adminlogincheck:string="http://localhost:7075/pdms/admincontroller/Adminlogin";
-  getalldoctors:string = "http://localhost:7075/pdms/admincontroller/getalldoctor";
+  adminlogincheck:string="http://18.222.231.58:7075/pdms/admincontroller/Adminlogin";
+  getalldoctors:string = "http://18.222.231.58:7075/pdms/admincontroller/getalldoctor";
   // deletedoctorbyid:string="localhost:7075/pdms/doctorcontroller/deletedoctorbyid"; 
-  doctorregister:string = "http://localhost:7075/pdms/admincontroller/doctorregistration";
+  doctorregister:string = "http://18.222.231.58:7075/pdms/admincontroller/doctorregistration";
   //methods
   
   // check admin
@@ -23,7 +23,7 @@ export class DoctorserviceService {
   }
   // check doctor
   doctorlogincheckmethod(doctorobject:Doctor){
-    return this.http.post("http://localhost:7075/pdms/doctorcontroller/doctorlogin",doctorobject);
+    return this.http.post("http://18.222.231.58:7075/pdms/doctorcontroller/doctorlogin",doctorobject);
   }
 
   // getting all doctors list (returns list of doctor objects)
@@ -37,11 +37,11 @@ export class DoctorserviceService {
   }
   //deletedoctorby id 
   deletedoctorbyidmethod(deletableid:Doctor):Observable<any [] >{
-    return this.http.post<any []>("http://localhost:7075/pdms/admincontroller/deletedoctorbyid",deletableid);
+    return this.http.post<any []>("http://18.222.231.58:7075/pdms/admincontroller/deletedoctorbyid",deletableid);
   }
 
   getdoctorbyid(id:number){
-    return this.http.get(`http://localhost:7075/hospital/doctorcontroller/getbyid/${id}`);
+    return this.http.get(`http://18.222.231.58:7075/hospital/doctorcontroller/getbyid/${id}`);
   }
 
 

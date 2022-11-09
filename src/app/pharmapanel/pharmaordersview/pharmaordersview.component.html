@@ -1,0 +1,27 @@
+<div class="mainc" >
+    <table class="table table-info">
+        <thead class="table-dark">
+        <tr >
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">drugId</th>
+          <th scope="col"> patient name</th>
+          <th scope="col"> pharamasit name</th>
+          <th scope="col">order status</th>
+          <th scope="col">quantity</th>
+
+        <th scope="col">operation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let order of orders "  >
+         <td>{{ order.drugId }}</td>
+                  <td>{{ order.pname }}</td>
+                  <td>{{ order.phaname}}</td>
+                  <td>{{ order.orderstatus}}</td>
+                  <td>{{ order.quantity }}</td>
+             
+                  <td><button (click)="vieworder(order.drugId)" class="btn btn-success">view</button>
+        </tr>
+        </tbody>
+      </table>
+    </div>

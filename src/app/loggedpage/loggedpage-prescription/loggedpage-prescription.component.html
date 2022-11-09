@@ -1,10 +1,27 @@
-<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+<div class="mainc" >
+  <table class="table table-info">
+      <thead class="table-dark">
+      <tr >
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Record Id</th>
+        <th scope="col"> Doctor name</th>
+        <th scope="col"> Hospital </th>
+        <th scope="col">Patient selectedstream</th>
+        <th scope="col">your name</th>
 
-<body>
-<div class="cards">
-  <div class="card"   >
-    <h2 class="card-title">Seal</h2>
-    <p class="card-desc"></p>
+      <th scope="col">operation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let healthreport of healthreports "  >
+       <td>{{ healthreport.id }}</td>
+                <td>{{ healthreport.patientselecteddoctorname }}</td>
+                <td>{{ healthreport.patientselectedhospital}}</td>
+                <td>{{ healthreport.patientselectedstream}}</td>
+                <td>{{ healthreport.patientname }}</td>
+           
+                <td><button (click)="viewdoctorprescribe(healthreport.id)" class="btn btn-success">viewform</button>
+      </tr>
+      </tbody>
+    </table>
   </div>
-</div>
-</body>
