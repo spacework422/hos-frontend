@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { Patient } from './Patient';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -9,12 +10,12 @@ import { Patient } from './Patient';
 })
 export class PatientserviceService {
   constructor(private http:HttpClient) { }
-  
+  globalurltype=environment.globalurl;
   // baseurl for patient only
-  patientgetbyid:string="http://18.222.231.58:7075/pdms/patientcontroller/getbyid/";
-  patientalldata:string = "http://18.222.231.58:7075/pdms/patientcontroller/getpatient";
-  patientregister:string = "http://18.222.231.58:7075/pdms/patientcontroller/patientregister";
-  patientlogin:string='http://18.222.231.58:7075/pdms/patientcontroller/userlogin';
+  patientgetbyid:string=`http://${this.globalurltype}:7075/pdms/patientcontroller/getbyid/`;
+  patientalldata:string = `http://${this.globalurltype}:7075/pdms/patientcontroller/getpatient`;
+  patientregister:string = `http://${this.globalurltype}:7075/pdms/patientcontroller/patientregister`;
+  patientlogin:string=`http://${this.globalurltype}:7075/pdms/patientcontroller/userlogin`;
  
   //get all patients details
   allpatientsdata(){
@@ -22,7 +23,7 @@ export class PatientserviceService {
   }
   //get by id
   getpatientbyid(param:number){
-  return this.http.get(`http://18.222.231.58:7075/pdms/patientcontroller/getbyid/${param}`);
+  return this.http.get(`http://${this.globalurltype}:7075/pdms/patientcontroller/getbyid/${param}`);
   }
   //post method
   patientpostmethod(patientdata:Patient){

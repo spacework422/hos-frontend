@@ -36,6 +36,10 @@ const routes: Routes = [
   {path:'general', component:GeneraltestComponent},
   {path:'aboutus', component:AboutusComponent},
   {path:'contactus', component:ContactusComponent},
+  {path:'admin-doctorregistration-home' , component:AdminDoctorregistrationComponent },
+  {path:'admin-pharmasistregistration-home' , component:AdminPharmasistregistrationComponent},
+
+
 
 
 

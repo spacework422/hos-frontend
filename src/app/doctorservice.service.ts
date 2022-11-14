@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Admin } from './Admin';
 import { Doctor } from './Doctor';
 
@@ -9,12 +10,13 @@ import { Doctor } from './Doctor';
 })
 export class DoctorserviceService {
   constructor(private http:HttpClient) { }
+  globalurltype=environment.globalurl
   
   //urls
-  adminlogincheck:string="http://18.222.231.58:7075/pdms/admincontroller/Adminlogin";
-  getalldoctors:string = "http://18.222.231.58:7075/pdms/admincontroller/getalldoctor";
+  adminlogincheck:string=`http://${this.globalurltype}:7075/pdms/admincontroller/Adminlogin`;
+  getalldoctors:string = `http://${this.globalurltype}:7075/pdms/admincontroller/getalldoctor`;
   // deletedoctorbyid:string="localhost:7075/pdms/doctorcontroller/deletedoctorbyid"; 
-  doctorregister:string = "http://18.222.231.58:7075/pdms/admincontroller/doctorregistration";
+  doctorregister:string = `http://${this.globalurltype}:7075/pdms/admincontroller/doctorregistration`;
   //methods
   
   // check admin
@@ -23,7 +25,7 @@ export class DoctorserviceService {
   }
   // check doctor
   doctorlogincheckmethod(doctorobject:Doctor){
-    return this.http.post("http://18.222.231.58:7075/pdms/doctorcontroller/doctorlogin",doctorobject);
+    return this.http.post(`http://${this.globalurltype}:7075/pdms/doctorcontroller/doctorlogin`,doctorobject);
   }
 
   // getting all doctors list (returns list of doctor objects)
@@ -37,11 +39,11 @@ export class DoctorserviceService {
   }
   //deletedoctorby id 
   deletedoctorbyidmethod(deletableid:Doctor):Observable<any [] >{
-    return this.http.post<any []>("http://18.222.231.58:7075/pdms/admincontroller/deletedoctorbyid",deletableid);
+    return this.http.post<any []>(`http://${this.globalurltype}:7075/pdms/admincontroller/deletedoctorbyid`,deletableid);
   }
 
   getdoctorbyid(id:number){
-    return this.http.get(`http://18.222.231.58:7075/hospital/doctorcontroller/getbyid/${id}`);
+    return this.http.get(`http://${this.globalurltype}:7075/hospital/doctorcontroller/getbyid/${id}`);
   }
 
 

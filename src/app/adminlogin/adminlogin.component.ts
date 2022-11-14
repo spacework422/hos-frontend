@@ -24,7 +24,7 @@ export class AdminloginComponent implements OnInit {
    }
    this.dc.adminlogincheckmethod(this.logindataobject).subscribe((res)=>{
     if(res==true){
-      this.router.navigate(['/adminpanel/admin-doctorregistration']);
+      this.router.navigate(['/adminpanel/admin-doctoredit']);
     }
     else{
       this.invalidLogin=true;

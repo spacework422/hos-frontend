@@ -26,8 +26,8 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <div class="logo me-auto row ">
-     <div class="col" > <a href="index.html" ><img src="assets/img/combined/pdms11.jpg" alt="" class="img-fluid"></a></div>
-     <div class="col" style="margin-top: 5px;" > <h1 ><a href="index.html">PDMS</a></h1> </div>
+     <div class="col" style="margin-top: 30px;" > <a href="index.html" ><img src="assets/img/combined/pdms11.jpg" alt="" class="img-fluid"></a></div>
+     <span><div class="col" id="title" style="margin-left: 60px;" > <h1 ><a>Prescription Drug Management System</a></h1> </div> </span>
       <!-- Uncomment below if you prefer to use an image logo -->
     </div>
       <nav id="navbar" class="navbar">
@@ -41,6 +41,8 @@
               <a class="dropdown-item" href="/doctorlogin">Doctor Login</a>
               <a class="dropdown-item" href="/pharmacistlogin">pharmacist login</a>
               <a class="dropdown-item" href="/login">patient login</a>
+              <a class="dropdown-item" href="/adminlogin">Admin login</a>
+
 
             </div>
           </li>
@@ -50,9 +52,13 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/patientSignup">Patient Register</a>
-            
+              <a class="dropdown-item" href="/admin-doctorregistration-home">Doctor Register</a>
+              <a class="dropdown-item" href="/admin-pharmasistregistration-home">Pharmasist Register</a>
+
             </div>
           </li>
+          <li><a class="nav-link scrollto active" routerLink="/aboutus">About Us</a></li>
+          <li><a class="nav-link scrollto active" routerLink="/contactus">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -153,7 +159,7 @@
     <div class="container">
       <h3>PDMS</h3>
       <p> The Prescription Drug Management System is developed to automate all the works which
-        are handled by doctors for prescribing medicines to the patients <a routerLink="/aboutus">about Us</a> , <a routerLink="/contactus" > Contact Us</a> </p>
+        are handled by doctors for prescribing medicines to the patients  </p>
       <div class="social-links">
         <button class="btn btn-primary" style="margin-left:10px;" > Home </button>
         <button class="btn btn-primary" style="margin-left:10px;" > Submit </button>
