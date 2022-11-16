@@ -44,6 +44,7 @@ import { LoggedDrugComponent } from './loggedpage/logged-drug/logged-drug.compon
 import { PharmaviewformComponent } from './pharmapanel/pharmaviewform/pharmaviewform.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { AdminRegisterComponent } from './admin-register/admin-register.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     LoggedDrugComponent,
     PharmaviewformComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    AdminRegisterComponent
     
   ],
   imports: [

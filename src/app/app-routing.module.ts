@@ -1,6 +1,7 @@
 import { NgModule,  } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdminRegisterComponent } from './admin-register/admin-register.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminDoctorregistrationComponent } from './adminpanel/admin-doctorregistration/admin-doctorregistration.component';
 import { AdminPharmasistregistrationComponent } from './adminpanel/admin-pharmasistregistration/admin-pharmasistregistration.component';
@@ -38,11 +39,10 @@ const routes: Routes = [
   {path:'contactus', component:ContactusComponent},
   {path:'admin-doctorregistration-home' , component:AdminDoctorregistrationComponent },
   {path:'admin-pharmasistregistration-home' , component:AdminPharmasistregistrationComponent},
+  {path:'admin-register' , component:AdminRegisterComponent},
 
 
-
-
-
+    
 
   //admin panel and routes 
   {path:'adminlogin', component:AdminloginComponent},

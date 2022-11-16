@@ -14,6 +14,7 @@ export class DoctorserviceService {
   
   //urls
   adminlogincheck:string=`http://${this.globalurltype}:7075/pdms/admincontroller/Adminlogin`;
+  adminregister:string=`http://${this.globalurltype}:7075/pdms/admincontroller/adminregister`;
   getalldoctors:string = `http://${this.globalurltype}:7075/pdms/admincontroller/getalldoctor`;
   // deletedoctorbyid:string="localhost:7075/pdms/doctorcontroller/deletedoctorbyid"; 
   doctorregister:string = `http://${this.globalurltype}:7075/pdms/admincontroller/doctorregistration`;
@@ -22,6 +23,10 @@ export class DoctorserviceService {
   // check admin
   adminlogincheckmethod(adminobjectvalue:Admin){
     return this.http.post(this.adminlogincheck,adminobjectvalue);
+  }
+  //admin register 
+  adminregistermethod(adminobject:Admin){
+    return this.http.post(this.adminregister,adminobject); 
   }
   // check doctor
   doctorlogincheckmethod(doctorobject:Doctor){
